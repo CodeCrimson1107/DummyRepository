@@ -1,0 +1,6 @@
+use [Marketing]
+go
+SELECT COUNT (*) As CNT,SUBSTRING(DateQuoted,1,4)*100+SUBSTRING(DateQuoted,6,2) As YYYYMM
+FROM dbo.ITC_TN_N_XL
+GROUP BY SUBSTRING(DateQuoted,1,4)*100+SUBSTRING(DateQuoted,6,2)
+ORDER BY SUBSTRING(DateQuoted,1,4)*100+SUBSTRING(DateQuoted,6,2)
